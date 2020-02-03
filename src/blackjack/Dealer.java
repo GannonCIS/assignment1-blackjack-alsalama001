@@ -11,4 +11,17 @@ package blackjack;
  */
 public class Dealer {
     
+    private void dealOpeningHand(){
+        
+    }
+    private void takePlayerTurns(){
+        
+    }
+    private void playOutDealerHand(){
+        
+    }
+    private void declareWiners(){
+        
+    }
+    
 }
