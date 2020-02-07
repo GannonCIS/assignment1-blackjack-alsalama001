@@ -14,7 +14,9 @@ public class Dealer {
     private Hand dHand = new Hand();
     
     private void dealOpeningHand(){
-        
+        for(int i =0; i < 2 ; i++){
+            
+        }
     }
     private void takePlayerTurns(){
         

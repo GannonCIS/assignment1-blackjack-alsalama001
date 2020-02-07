@@ -15,7 +15,14 @@ public class BlackJack {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       
+        Deck myDeck = new Deck();
+        Hand myHand = new Hand();
+        for(int i = 0; i < 6; i++){
+            myHand.addCard(myDeck.dealCard());
+            System.out.println("numOfCards: " + myHand.getNumOfCards() +
+                    " score: " + myHand.getScore());
+        }
     }
     
 }

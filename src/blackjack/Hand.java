@@ -25,10 +25,22 @@ public class Hand {
     }
     
     public void addCard(Card newCard){
-        
-    }
-    
-    public void printHand(){
-        
+        if(numOfCards >4){
+            System.out.println("Too many cards for this hand");
+        }else{
+            myCards[numOfCards] = newCard;
+            numOfCards++;
+            
+            try{
+            score += Integer.parseInt(newCard.RANK);
+            
+            }catch(java.lang.NumberFormatException ex){
+                if(newCard.RANK.equals("ACE")){
+                    score += 1;
+                }else{
+                    score += 10;
+                }
+            }
+        }
     }
 }
