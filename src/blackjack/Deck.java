@@ -34,14 +34,7 @@ public class Deck {
             myCards[i] = myCards [rand];
             myCards[rand] = temp;
         }
-    }
-    
-    //printDeck is for testing only --delete me
-    public void printDeck(){
-        for(int i = 0; i < myCards.length; i++){
-            System.out.println(myCards[i].RANK+" of " + myCards[1].SUIT);
-        }
-    }
+    }    
     
     public Card dealCard(){
        
