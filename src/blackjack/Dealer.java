@@ -48,8 +48,23 @@ public class Dealer {
         dealerHand.printHand();
         
     }
+    
     public void declareWiners(){
         
+        for(Player currPlayer : myPlayers){
+           if(currPlayer.getMyHand().getScore() > 21){
+               System.out.println("Dealer won!");
+           }else if(dealerHand.getScore() > 21 && dealerHand.getNumOfCards()
+                   > 5){
+               System.out.println("The Player won!");
+           }else if(currPlayer.getMyHand().getScore() < 22 && dealerHand
+                   .getScore() < 21 && dealerHand.getNumOfCards() < 5){
+               System.out.println("The Player won!");
+           }else if(currPlayer.getMyHand().getNumOfCards() == 5 && 
+                   dealerHand.getNumOfCards() < 5 && dealerHand.getScore()<21){
+               System.out.println("The Player won!");
+           }
+        }
     }
     private void initMyPlayers(int num){
         myPlayers = new Player[num];
